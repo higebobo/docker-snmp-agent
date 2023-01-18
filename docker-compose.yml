@@ -1,0 +1,13 @@
+version: "3.7"
+
+services:
+  app:
+    build:
+      context: ./snmp-agent
+      args:
+        ADMIN: ${ADMIN}
+    container_name: ${CONTAINER:-container}
+    restart: always
+    tty: true
+    ports:
+      - "${APP_PORT:-161}:161/udp"
