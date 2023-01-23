@@ -6,7 +6,7 @@ OPTIONS=$@
 MIBS_DIR=/usr/share/snmp/mibs
 
 # =============================================================
-# Settings - Replace variables
+# Settings
 # =============================================================
 ## Modify snmp.conf
 sed -i".orig" "s/mibs :/mibs all/" /etc/snmp/snmp.conf
@@ -26,7 +26,7 @@ fi
 
 
 # =============================================================
-# Download mibs
+# Download MIBs
 # =============================================================
 download-mibs
 
